@@ -17,7 +17,7 @@ class StopWatch {
 
         this.isRunning = false;
         this.timer = null;
-        this.timerTimer = 0;
+        this.timeTimer = 0;
 
         this.startBtn = document.getElementById("start");
         this.stopBtn = document.getElementById("stop");
@@ -43,9 +43,9 @@ class StopWatch {
     }
 
     incrementTimer() {
-        this.timerTime++;
-        let minutes = Math.floor(this.timerTime / 60);
-        let seconds = Math.floor(this.timerTime % 60);
+        this.timeTimer++;
+        let minutes = Math.floor(this.timeTimer / 60);
+        let seconds = Math.floor(this.timeTimer % 60);
 
         document.getElementById("minutes").innerHTML = this.pad(minutes);
         document.getElementById("seconds").innerHTML = this.pad(seconds);
@@ -67,7 +67,7 @@ class StopWatch {
 
     resetTimer() {
         this.stopTimer();
-        this.timerTime = 0;
+        this.timeTimer = 0;
         // write 00 to the elements on the page for minutes and seconds
         document.getElementById("minutes").innerHTML = this.pad(0);
         document.getElementById("seconds").innerHTML = this.pad(0);
