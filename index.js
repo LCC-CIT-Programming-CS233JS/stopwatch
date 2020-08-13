@@ -76,7 +76,6 @@ function stopTimer() {
 }
 
 function resetTimer() {
-    console.log("reset");
     // stop the timer
     stopTimer();
     // set the timerTime back to 0
